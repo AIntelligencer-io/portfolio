@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Necati Yücekul</title>
+<script>
+  /* Adres bir proje sayfasını gösteriyorsa (ör. #obilet) ana sayfa, proje sayfası açılana kadar gizli kalır.
+     Böylece yenilemede ana sayfa (sol üstteki logo dahil) bir an görünüp kaybolmaz. */
+  (function () {
+    var h = location.hash.slice(1);
+    if (h && !/^(ust|slogan|hakkimda|calismalar|iletisim|icerik)$/.test(h)) {
+      var r = document.documentElement;
+      r.classList.add("deep-case");
+      setTimeout(function () { r.classList.remove("deep-case"); }, 4000); /* güvenlik: kod çalışmazsa sayfa yine görünsün */
+    }
+  })();
+</script>
+<style>html.deep-case body > :not(dialog) { visibility: hidden; }</style>
+<meta name="description" content="Necati Yücekul, endüstriyel tasarım öğrencisi. Ürün tasarımı, grafik tasarım ve UI/UX tasarım projeleri.">
+<meta property="og:title" content="Necati Yücekul · Portfolyo">
+<meta property="og:description" content="Ürün tasarımı, grafik tasarım ve UI/UX tasarım projeleri.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<link rel="canonical" href="https://necatiyucekul.com/">
+<meta property="og:url" content="https://necatiyucekul.com/">
+<meta property="og:image" content="https://necatiyucekul.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Necati Yücekul · Portfolyo">
+<meta name="twitter:description" content="Ürün tasarımı, grafik tasarım ve UI/UX tasarım projeleri.">
+<meta name="twitter:image" content="https://necatiyucekul.com/og-image.png">
+<meta name="theme-color" content="#0C0C0B">
+<link rel="icon" href="favicon.svg?v=2" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#icerik">İçeriğe geç</a>
+
+<!-- ÜST MENÜ: en üstte geniş, kaydırınca daralır -->
+<header class="nav-wrap" id="nav-wrap">
+  <nav class="nav" aria-label="Ana menü">
+    <a class="brand" href="#ust" aria-label="Necati Yücekul, ana sayfa"><img src="logo/n-logo.svg" alt="" width="40" height="40"></a>
+    <ul class="nav-links">
+      <li><a class="label" href="#hakkimda">Hakkımda</a></li>
+      <li><a class="label" href="#calismalar">Projeler</a></li>
+      <li><a class="label" href="#iletisim">İletişim</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="icerik">
+
+  <!-- GİRİŞ -->
+  <section class="hero" id="ust" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true">
+      <video class="hero-video is-on" id="hero-v0" src="media/hero-dust-web.mp4" muted playsinline preload="auto" tabindex="-1"></video>
+      <video class="hero-video" id="hero-v1" src="media/hero-dust-web.mp4" muted playsinline preload="auto" tabindex="-1"></video>
+    </div>
+    <div class="hero-shade" aria-hidden="true"></div>
+
+    <div class="hero-brand">
+      <h1 class="sr" id="hero-title"><span data-name>Necati Yücekul</span>, endüstriyel tasarım öğrencisi</h1>
+      <p class="mark" aria-hidden="true"><span class="mark-slash">/</span><span class="mark-word" id="mark-word"></span><span class="mark-caret"></span></p>
+      <a class="scroll label" href="#slogan"><span class="scroll-line" aria-hidden="true"></span>Kaydır</a>
+    </div>
+
+    <ul class="hero-info" aria-label="Kısa bilgiler">
+      <li class="chip"><svg class="pin" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.5s-7-5.9-7-11.6a7 7 0 0 1 14 0c0 5.7-7 11.6-7 11.6Z"/><circle cx="12" cy="9.8" r="2.6"/></svg><span>Türkiye</span></li>
+    </ul>
+  </section>
+
+  <!-- KAYAN BANT -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="ticker"></div>
+  </div>
+
+  <!-- SLOGAN -->
+  <section class="section slogan" id="slogan" aria-label="Slogan">
+    <div class="wrap">
+      <p class="slogan-text">Tasarım süreci kullanıcı araştırmasıyla başlar, elde edilen bulgular çözüme dönüşür.</p>
+    </div>
+  </section>
+  <!-- HAKKIMDA -->
+  <section class="section about" id="hakkimda" aria-labelledby="about-title">
+    <div class="wrap split">
+      <div class="split-left">
+        <p class="label">Hakkımda</p>
+        <figure class="about-fig" id="about-fig">
+          <img src="media/profil.jpg" alt="Necati Yücekul" width="960" height="1286" loading="lazy">
+        </figure>
+      </div>
+      <div class="split-right">
+        <h2 class="about-title" id="about-title"><span class="about-hi">Merhaba</span><span class="about-sub">ben <span class="about-name">Necati Yücekul</span>,</span></h2>
+        <div class="about-text">
+          <p>Endüstriyel Tasarım öğrencisiyim. Tasarım sürecinde detaylara, ergonomiye ve kullanılabilirliğe önem veriyorum. Bireysel projelerimin yanı sıra, üniversitedeki tasarım topluluklarında ekip çalışması süreçlerinde de aktif rol aldım. Yeni şeyler öğrenmeye açık, sorumluluk alabilen ve gerçek dünyadaki problemlere pratik, uygulanabilir çözümler üretmeye odaklanan bir çalışma disiplinim var.</p>
+        </div>
+
+        <!-- iki sütun: solda eğitim, gönüllülük, deneyim; sağda programlar ve sertifikalar -->
+        <div class="about-cols">
+          <div>
+            <h3 class="label label--gap">Eğitim</h3>
+            <ul class="biglist">
+              <li><span class="bl-name">Selçuk Üniversitesi</span><span class="bl-note">Endüstriyel Tasarım</span></li>
+            </ul>
+
+            <h3 class="label label--gap">Gönüllülük Çalışması</h3>
+            <ul class="biglist">
+              <li><span class="bl-name">stuDesigners Topluluğu</span><span class="bl-note">Sosyal Medya Post Tasarımcısı (4 yıl)</span></li>
+            </ul>
+
+            <h3 class="label label--gap">Deneyim</h3>
+            <ul class="biglist">
+              <li><span class="bl-name">GEE Makine Teknolojileri</span><span class="bl-note">Üretim Stajı (1.5 ay)</span></li>
+              <li><span class="bl-name">Perilla Ev Ürünleri</span><span class="bl-note">Ofis Stajı (1.5 ay)</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="label label--gap">Programlar</h3>
+            <ul class="biglist biglist--plain">
+              <li><span class="bl-name">Figma</span></li>
+              <li><span class="bl-name">Blender</span></li>
+              <li><span class="bl-name">Rhinoceros3D</span></li>
+              <li><span class="bl-name">Adobe Photoshop</span></li>
+              <li><span class="bl-name">Adobe Premiere Pro</span></li>
+              <li><span class="bl-name">Adobe Ilustrator</span></li>
+              <li><span class="bl-name">Autodesk Fusion 360</span></li>
+            </ul>
+
+            <h3 class="label label--gap">Sertifikalar</h3>
+            <ul class="biglist">
+              <li><span class="bl-name">UserGets UX Araştırma Eğitimi</span><span class="bl-note">Eğitim Sertifikası</span></li>
+              <li><span class="bl-name">UserGets UX/UI Tasarım Eğitimi</span><span class="bl-note">Eğitim Sertifikası</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÇALIŞMALAR -->
+  <section class="section works" id="calismalar" aria-labelledby="works-title">
+    <div class="wrap">
+      <div class="works-head">
+        <h2 class="h2" id="works-title">Projeler</h2>
+      </div>
+      <div class="tabs" id="filters" role="group" aria-label="Kategoriye göre filtrele"></div>
+      <ol class="names" id="names"></ol>
+      <noscript>
+        <!-- JavaScript kapalıyken görünen yedek liste (data.js ile aynı tutun) -->
+        <ul class="noscript-list">
+          <li>Wanetime <span>Ürün Tasarımı, 2026</span></li>
+          <li>Organice <span>Ürün Tasarımı, 2025</span></li>
+          <li>Trail Series <span>Ürün Tasarımı, 2025</span></li>
+          <li>Harwaste <span>Ürün Tasarımı, 2024</span></li>
+          <li>Sosyal Medya Tasarımları <span>Grafik Tasarım, 2026</span></li>
+          <li>Obilet Ana Sayfa Ekranı <span>UI/UX Tasarım, 2026</span></li>
+          <li>GiB Ödeme Ekranı <span>UI/UX Tasarım, 2025</span></li>
+          <li>GetFit Örnek Vaka Çalışması <span>UI/UX Tasarım, 2026</span></li>
+          <li>Audioverse Giriş Ekranı <span>UI/UX Tasarım, 2025</span></li>
+        </ul>
+        <p class="noscript-note">Proje ayrıntıları için JavaScript gerekir. İletişim: <a href="mailto:necatiyucekul@gmail.com">necatiyucekul@gmail.com</a></p>
+      </noscript>    </div>
+  </section>
+
+  <!-- İLETİŞİM -->
+  <section class="contact" id="iletisim" aria-labelledby="contact-title">
+    <div class="contact-glow" aria-hidden="true"></div>
+    <h2 class="contact-title grad" id="contact-title">Bir sonraki projeyi<br>konuşalım.</h2>
+    <p class="contact-email" id="email">necatiyucekul@gmail.com</p>
+    <div class="contact-actions">
+      <button type="button" class="btn btn--light" id="copy-email">Adresi kopyala</button>
+      <a class="btn" id="mail-link" href="mailto:necatiyucekul@gmail.com">E-posta uygulamasında aç</a>
+    </div>
+    <ul class="contact-links" id="social"></ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p class="label label--muted">© <span data-year>2026</span> <span data-name>Necati Yücekul</span></p>
+</footer>
+
+<!-- PROJE DETAY SAYFASI -->
+<dialog class="case" id="case" aria-labelledby="case-title">
+  <!-- ana sayfadaki menüyle aynı yapı: en üstte geniş, kaydırınca kapsüle dönüşür -->
+  <header class="nav-wrap case-nav">
+    <nav class="nav" aria-label="Proje menüsü">
+      <a class="brand" href="#ust" id="case-home" aria-label="Necati Yücekul, ana sayfaya dön"><img src="logo/n-logo.svg" alt="" width="40" height="40"></a>
+      <ul class="nav-links">
+        <li><button type="button" class="label case-back" id="case-back">Ana sayfaya dön</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- yalnızca "reel" düzenli projelerde (ör. Sosyal Medya Tasarımları): dikey, sonsuz kayan görsel akışı.
+       Fare tekerleği, sürükleme ya da ok tuşlarıyla kayar; görsele tıklayınca büyük boyutu açılır. -->
+  <section class="reel" id="case-reel" hidden aria-label="Proje görselleri" tabindex="-1">
+    <div class="reel-track" id="reel-track"></div>
+    <div class="reel-info">
+      <p class="reel-title" id="reel-title"></p>
+      <!-- alt kategoriler (ör. Post / Story): projeler bölümündeki kategori sekmeleriyle aynı stil -->
+      <div class="tabs reel-tabs" id="reel-tabs" role="group" aria-label="Alt kategori"></div>
+      <p class="label label--muted" id="reel-count" aria-live="polite"></p>
+    </div>
+    <p class="reel-hint label label--muted" aria-hidden="true"><span class="scroll-line"></span>Kaydır</p>
+  </section>
+  <div class="reel-box" id="reel-box" hidden role="dialog" aria-modal="true" aria-label="Görsel büyük boyutta">
+    <button type="button" class="label reel-close" id="reel-close">Kapat</button>
+    <div class="reel-box-media" id="reel-box-media"></div>
+  </div>
+
+  <!-- yalnızca proje görseli -->
+  <section class="case-hero" aria-label="Proje görseli">
+    <div class="case-hero-media" id="case-hero-media" aria-hidden="true"></div>
+    <p class="case-scroll label" aria-hidden="true"><span class="scroll-line"></span>Kaydır</p>
+  </section>
+
+  <div class="case-main">
+  <div class="case-body">
+    <!-- başlık ayrı bir alanda -->
+    <header class="case-head">
+      <h2 class="case-title" id="case-title"></h2>
+      <p class="case-intro" id="case-intro"></p>
+    </header>
+
+    <!-- açıklama solda, görsel sağda; bölümler main.js'te üretilir -->
+    <div class="case-secs" id="case-secs"></div>
+
+    <button type="button" class="case-next" id="case-next">
+      <span class="label label--muted">Sonraki proje</span>
+      <span class="case-next-title" id="case-next-title"></span>
+    </button>
+  </div>
+  </div>
+</dialog>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
